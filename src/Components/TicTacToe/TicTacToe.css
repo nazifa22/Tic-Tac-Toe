@@ -19,16 +19,19 @@ ol, ul {
 
 .square {
     background: #fff;
-    border: 1px solid #999;
+    border: 1px dashed #9E9E9E;
     float: left;
     font-size: 20px;
     line-height: 34px;
-    height: 40px;
+    height: 60px;
     margin-right: -1px;
-    margin-top: 5px;
+    margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 40px;
+    width: 60px;    
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 .square:focus {
@@ -46,4 +49,29 @@ ol, ul {
 
 .game-info {
     margin-left: 20px;
+}
+
+div#board {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 0;
+    grid-row-gap: 0px;
+    justify-content: flex-start;
+    margin-top: 40px;
+}
+
+.square:nth-child(7), .square:nth-child(8), .square:nth-child(9) {
+    border-bottom: 0;
+}
+
+.square:nth-child(1), .square:nth-child(2), .square:nth-child(3) {
+    border-top: 0;
+}
+
+.square:nth-child(3n+1) {
+    border-left: 0;
+}
+
+.square:nth-child(3n) {
+    border-right: 0;
 }
